@@ -7,3 +7,5 @@
 - Executando o projeto com cargo: `$ cargo run`
 - Cria uma versão release do projeto: `$ cargo run --release`
 - Exibe ajuda: `$ cargo run --help`
+
+- Criando projeto utilizando cargo sem o comando new: `$ cargo init`
