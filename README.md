@@ -12,6 +12,8 @@
 
 - Criando projeto utilizando cargo sem o comando new: `$ cargo init`
 
+---
+
 ### Anotações
 
 #### Variáveis
@@ -64,6 +66,8 @@ let referencia_mut = &mut valor;
 - Matemática: Oferece funcionalidades matemáticas, incluindo std::f64, std::f32, std::num, etc.
 - Padrões de Comportamento: Define traços (traits) e implementações padrão para muitos comportamentos comuns, como std::cmp, std::ops, std::iter, entre outros.
 
+---
+
 #### Funções
 
 - As funções em Rust são blocos de código que realizam uma tarefa específica. Elas são uma parte fundamental do design de programas em Rust e seguem algumas regras e características particulares.
@@ -115,12 +119,14 @@ fn nome_da_funcao() {
 
 ```rust
 fn maior_valor(a: i32, b: i32) -> i32 {
-  if a > b {
-    a
-  } else {
-    b
-  }
-} // O valor deste bloco é implicitamente retornado
+  {
+    if a > b {
+      a
+    } else {
+      b
+    }
+  } // O valor deste bloco é implicitamente retornado
+}
 
 fn main() {
   let maior = maior_valor(8, 12);
@@ -144,6 +150,7 @@ fn main() {
   println!("O número é: {}", resultado);
 }
 ```
+---
 
 #### Parâmetros
 
@@ -185,3 +192,5 @@ fn main() {
   saudacao("Bob", None);
 }
 ```
+
+---
