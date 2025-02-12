@@ -63,3 +63,125 @@ let referencia_mut = &mut valor;
 - Tempo e Data: Inclui tipos e funcionalidades para manipulação de tempo e data, como std::time e std::chrono.
 - Matemática: Oferece funcionalidades matemáticas, incluindo std::f64, std::f32, std::num, etc.
 - Padrões de Comportamento: Define traços (traits) e implementações padrão para muitos comportamentos comuns, como std::cmp, std::ops, std::iter, entre outros.
+
+#### Funções
+
+- As funções em Rust são blocos de código que realizam uma tarefa específica. Elas são uma parte fundamental do design de programas em Rust e seguem algumas regras e características particulares.
+
+```rust
+fn nome_da_funcao(parametro1: Tipo1, parametro2: Tipo2) -> TipoDeRetorno {
+  // Corpo da função
+}
+```
+
+##### Deﬁnição
+
+- fn: Palavra-chave usada para declarar uma função.
+- nome_da_funcao: Identificador da função.
+- (parametro1: Tipo1, parametro2: Tipo2): Lista de parâmetros da função, cada um com um tipo associado.
+- -> TipoDeRetorno: Tipo de dado que a função retorna. Se uma função não retorna nada, esse tipo é indicado como (), que é o tipo da unidade.
+
+##### Retorno
+- Em Rust, o valor de retorno de uma função é determinado pela última expressão sem ponto e vírgula no corpo da função. A última expressão é implicitamente retornada como o valor da função.
+- Este retorno é chamado de retorno implícito e você não precisa usar a palavra-chave return explicitamente para retornar um valor. A última expressão do corpo da função é implicitamente retornada como o resultado da função.
+
+##### Retorno Implícito
+
+```rust
+fn nome_da_funcao() -> i32 {
+  3
+}
+```
+
+##### Retorno Explícito
+
+```rust
+fn nome_da_funcao() -> i32 {
+  return 3;
+}
+```
+
+##### Retorno Vazio
+
+```rust
+fn nome_da_funcao() {
+  println!("Olá, mundo!");
+}
+```
+
+- Se uma função não retorna nada (o tipo de retorno é ()), pode ser omitida a seta e o tipo de retorno.
+
+##### Retorno de Blocos de Código
+
+```rust
+fn maior_valor(a: i32, b: i32) -> i32 {
+  if a > b {
+    a
+  } else {
+    b
+  }
+} // O valor deste bloco é implicitamente retornado
+
+fn main() {
+  let maior = maior_valor(8, 12);
+  println!("O maior número é: {}", maior);
+}
+```
+
+##### Retorno Condicional
+
+```rust
+fn positivo_ou_negativo(numero: i32) -> &'static str {
+  if numero >= 0 {
+    "positivo"
+  } else {
+    "negativo"
+  }
+}
+
+fn main() {
+  let resultado = positivo_ou_negativo(-5);
+  println!("O número é: {}", resultado);
+}
+```
+
+#### Parâmetros
+
+- Os parâmetros de função em Rust são usados para receber valores de entrada na função. Eles são especificados na declaração da função e podem ser usados dentro do corpo da função.
+- Rust não suporta parâmetros com valores padrão diretamente, mas você pode alcançar efeitos semelhantes usando sobrecarga de funções ou parâmetros opcionais.
+
+##### Declaração de Parâmetros
+- A declaração de parâmetros ocorre entre parênteses (), após o nome da função. Cada parâmetro é composto por um nome seguido por dois pontos (:) e o tipo do parâmetro.
+
+##### Parâmetros Mutáveis
+- Se você precisar modificar o valor do parâmetro dentro da função, pode declará-lo como mutável usando a palavra-chave mut:
+
+```rust
+fn incrementa(mut valor: i32) -> i32 {
+  valor += 1;
+  valor
+}
+
+fn main() {
+  let numero = 5;
+  let numero_incrementado = incrementa(numero);
+  println!("Número original: {}, Número incrementado: {}", numero, numero_incrementado);
+}
+```
+
+##### Parâmetros Opcionais
+- É possível alcançar um comportamento semelhante ao de parâmetros opcionais usando a enumeração Option.
+
+```rust
+fn saudacao(nome: &str, saudacao_personalizada: Option<&str>) {
+  match saudacao_personalizada {
+    Some(s) => println!("{} {}", s, nome),
+    None => println!("Olá, {}!", nome),
+  }
+}
+
+fn main() {
+  saudacao("Alice", Some("Bom dia"));
+  saudacao("Bob", None);
+}
+```
