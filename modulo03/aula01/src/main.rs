@@ -8,6 +8,10 @@ fn main() {
     let b = sem_return();
 
     println!("O valor retornado em b é: {}", b);
+
+    let c = maior_valor(10, 20);
+
+    println!("O maior valor entre {} e {} é {}", 10, 20, c);
 }
 
 fn nome_da_funcao() {
@@ -21,4 +25,9 @@ fn com_retorn() -> i8 {
 fn sem_return() -> i8 {
     // 3
     10
+}
+
+fn maior_valor(a: i32, b: i32) -> i32 {
+    // { if a > b { a } else { b }}
+    if a > b { a } else { b }
 }
