@@ -211,3 +211,8 @@ rand = "0.9.0"
 ```
 
 - A segunda forma é fazer via terminal dentro do projeto: `$ cargo add rand`
+
+### Criando múltiplos binários
+
+- Acessa um binário específico: `$ cargo run --bin hcode`
+- Ou por exemplo: `$ cargo run --bin nome_do_projeto`
