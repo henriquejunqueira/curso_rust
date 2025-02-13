@@ -1,0 +1,1 @@
+/home/henrique/Documentos/projetos/desenvolvimento/curso_rust/modulo08/aula02/target/debug/aula02: /home/henrique/Documentos/projetos/desenvolvimento/curso_rust/modulo08/aula02/src/main.rs /home/henrique/Documentos/projetos/desenvolvimento/curso_rust/modulo08/aula02/src/matematica.rs
