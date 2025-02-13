@@ -194,3 +194,20 @@ fn main() {
 ```
 
 ---
+
+### Usando pacotes externos via crates.io
+
+- A primeira forma de instalação de pacotes é escrevendo o nome do pacote nas dependências do Cargo.toml:
+
+```rust
+[package]
+name = "projeto"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.9.0"
+
+```
+
+- A segunda forma é fazer via terminal dentro do projeto: `$ cargo add rand`
