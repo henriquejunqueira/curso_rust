@@ -4,6 +4,10 @@ enum Coordenada {
 }
 
 fn main() {
+    enumeracao_com_dados()
+}
+
+fn enumeracao_com_dados() {
     let ponto2d = Coordenada::DoisD(5, 10);
     let ponto3d = Coordenada::TresD(3, 8, 15);
 
