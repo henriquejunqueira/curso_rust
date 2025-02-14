@@ -8,7 +8,7 @@ repository = "https://github.com/henriquejunqueira/curso_rust"
 license = "MIT"
 
 keywords = ["rust", "curso", "funcoes"]
-categories = ["functions"]
+categories = ["no-std"]
 
 [dependencies]
 
