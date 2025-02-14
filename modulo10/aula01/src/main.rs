@@ -1,4 +1,4 @@
-fn main() {
+fn vetor() {
     // cria uma lista. Em [u8; 5] é definido [tipo; tamanho]
     let lista: [u8; 5] = [1, 2, 3, 4, 5];
 
@@ -17,4 +17,8 @@ fn main() {
     for n in numeros {
         println!("{}", n);
     }
+}
+
+fn main() {
+    vetor();
 }
