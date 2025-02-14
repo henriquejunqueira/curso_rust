@@ -1,7 +1,7 @@
 // use std::{env, fs::File, io::prelude::*}; // io::prelude::* importa tudo da biblioteca std::io
 use std::{
     env,
-    fs::{File, metadata},
+    fs::{self, File, metadata},
     io::{Read, Write},
 };
 
@@ -59,4 +59,22 @@ pub fn existe(caminho_completo: &str) -> Result<(), &'static str> {
     } else {
         Err("O arquivo não existe.")
     }
+}
+
+pub fn ler_diretorio(caminho: &str) -> Result<(), std::io::Error> {
+    let items = fs::read_dir(caminho)?;
+
+    for item in items {
+        let item = item?;
+
+        let item_caminho = item.path();
+
+        if item_caminho.is_dir() {
+            println!("Diretório: {}", item_caminho.display());
+        } else {
+            println!("Arquivo: {}", item_caminho.display());
+        }
+    }
+
+    Ok(())
 }
