@@ -7,7 +7,7 @@ description = "Biblioteca de funções"
 repository = "https://github.com/henriquejunqueira/curso_rust"
 license = "MIT"
 
-keywords = ["rust", "curso", "funções"]
+keywords = ["rust", "curso", "funcoes"]
 categories = ["functions"]
 
 [dependencies]
