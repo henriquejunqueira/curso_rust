@@ -2,7 +2,7 @@
 name = "aula01"
 version = "0.1.0"
 edition = "2024"
-authors = ["Henrique Junqueira <henriquejunqueira.dev@gmail.com>"]
+authors = ["Henrique Junqueira <henriquejunqueira15@gmail.com>"]
 description = "Biblioteca de funções"
 repository = "https://github.com/henriquejunqueira/curso_rust"
 license = "MIT"
